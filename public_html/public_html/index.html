@@ -1,56 +1,461 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Conecta Dor Salvador · Orientação para dor na mandíbula e ATM</title>
   <meta name="description" content="Orientação inicial para quem sente dor, estalos, travamento ou desconforto na região da mandíbula e da ATM em Salvador.">
-  <title>Conecta Dor Salvador</title>
-  <style>
-    :root{--ink:#18302b;--green:#2f6b5c;--mint:#dfeee8;--cream:#fbf8f1;--white:#fff;--muted:#63716d;--line:#dce4e1;--shadow:0 18px 50px rgba(24,48,43,.10)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
-    a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(251,248,241,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(24,48,43,.08)}
-    nav{min-height:120px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand-mark{position:relative;display:block;width:155px;height:105px;overflow:hidden;flex:0 0 auto}.brand-mark img{position:absolute;width:185px;height:185px;max-width:none;left:-15px;top:-40px;display:block}
-    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;font-weight:750;transition:.2s ease}.nav-cta{padding:10px 18px;background:var(--ink);color:white}.nav-cta:hover,.btn:hover{transform:translateY(-2px)}
-    .hero{padding:84px 0 62px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:58px;align-items:center}.eyebrow{font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;color:var(--green);font-weight:800}
-    h1{font-size:clamp(2.7rem,6vw,5.3rem);line-height:.98;letter-spacing:-.055em;margin:18px 0 24px;max-width:780px}h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;letter-spacing:-.04em;margin:0 0 20px}h3{font-size:1.2rem;margin:0 0 9px}
-    .lead{font-size:1.18rem;color:var(--muted);max-width:650px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}.btn{padding:15px 23px;background:var(--green);color:white;box-shadow:var(--shadow)}.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
-    .jaw-card{position:relative;min-height:450px;border-radius:38px;background:linear-gradient(145deg,#d9ece4,#f4efe2);box-shadow:var(--shadow);display:grid;place-items:center;overflow:hidden}.jaw-card:before,.jaw-card:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(47,107,92,.22)}.jaw-card:before{width:330px;height:330px}.jaw-card:after{width:230px;height:230px}
-    .face{width:190px;height:265px;border:3px solid var(--green);border-radius:48% 48% 44% 44%/38% 38% 56% 56%;position:relative;z-index:2}.face:before{content:"";position:absolute;width:74px;height:38px;border-bottom:3px solid var(--green);border-radius:50%;left:55px;bottom:58px}.pulse{position:absolute;width:66px;height:66px;border-radius:50%;right:57px;top:205px;background:rgba(199,91,72,.18);box-shadow:0 0 0 16px rgba(199,91,72,.08)}
-    .micro{position:absolute;left:28px;bottom:25px;background:white;border-radius:18px;padding:14px 16px;width:210px;box-shadow:var(--shadow);font-size:.9rem}.micro strong{display:block;color:var(--green);margin-bottom:2px}
-    section{padding:76px 0}.white{background:white}.section-intro{max-width:720px;margin-bottom:38px;color:var(--muted);font-size:1.08rem}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:25px;border:1px solid var(--line);border-radius:24px;background:white}.card .num{font-size:.78rem;color:var(--green);font-weight:850;letter-spacing:.1em}.card p{color:var(--muted);margin:0}
-    .impact{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start}.impact-list{display:grid;gap:12px}.impact-item{display:flex;gap:15px;padding:18px 0;border-bottom:1px solid var(--line)}.dot{flex:0 0 34px;height:34px;border-radius:50%;background:var(--mint);display:grid;place-items:center;color:var(--green);font-weight:900}.impact-item p{margin:2px 0;color:var(--muted)}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.step{padding:28px;border-radius:25px;background:var(--cream);border:1px solid var(--line)}.step span{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--green);color:white;font-weight:800;margin-bottom:18px}
-    .faq{max-width:820px}.faq details{border-bottom:1px solid var(--line);padding:19px 0}.faq summary{cursor:pointer;font-weight:750;list-style:none}.faq summary::-webkit-details-marker{display:none}.faq p{color:var(--muted);margin:12px 0 0}
-    .cta{padding:54px;border-radius:34px;background:var(--ink);color:white;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.cta h2{margin-bottom:10px}.cta p{color:#cbd7d3;margin:0}.cta .btn{background:#e7f3ee;color:var(--ink);box-shadow:none}
-    footer{padding:34px 0;color:var(--muted);font-size:.9rem}.footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-    @media(max-width:820px){.hero{padding-top:58px}.hero-grid,.impact,.cta{grid-template-columns:1fr}.jaw-card{min-height:360px}.grid,.steps{grid-template-columns:1fr}.cta{padding:34px}.cta .btn{width:100%}}
-    @media(max-width:520px){.wrap{width:min(100% - 26px,1120px)}nav{min-height:102px}.brand-mark{width:125px;height:86px}.brand-mark img{width:150px;height:150px;left:-12px;top:-33px}.nav-cta{font-size:.82rem;padding:9px 12px}h1{font-size:2.8rem}.hero{padding-bottom:42px}.jaw-card{min-height:320px;border-radius:28px}.face{transform:scale(.82)}.micro{left:16px;bottom:16px}.actions .btn{width:100%}section{padding:58px 0}}
-  .brand-mark{width:105px;height:105px;border-radius:50%;overflow:hidden}.brand-mark img{position:static;width:100%;height:100%;object-fit:contain;max-width:100%;display:block}.doctor-video{display:block;width:min(100%,360px);height:auto;max-height:640px;border-radius:24px;background:#18302b;margin-left:auto;margin-right:auto}.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}@media(max-width:820px){.video-grid{grid-template-columns:1fr}}@media(max-width:520px){.brand-mark{width:86px;height:86px}.brand-mark img{position:static;width:100%;height:100%}}
-  
-    nav{justify-content:center;min-height:110px}.brand-wordmark{text-decoration:none;text-align:center;display:block;color:var(--green);line-height:1.12;padding:18px 0}.brand-wordmark span{display:block;font-size:2rem;font-weight:850;letter-spacing:-.04em}.brand-wordmark small{display:block;font-size:.9rem;letter-spacing:.22em;text-transform:uppercase;margin-top:6px}
-    .micro{width:calc(100% - 48px);max-width:350px;left:24px;bottom:24px;position:relative;align-self:end;margin-top:290px;z-index:3}.face,.pulse{position:absolute}.face{top:40px}.jaw-card{min-height:470px;padding-bottom:0}.micro{position:absolute;margin-top:0}.video-grid h3{margin-top:22px}h1{font-size:clamp(2.6rem,5.2vw,4.5rem);line-height:1.06}
-    @media(max-width:520px){nav{min-height:90px}.brand-wordmark span{font-size:1.7rem}.jaw-card{min-height:440px}.micro{width:calc(100% - 32px);left:16px;bottom:16px}h1{font-size:2.7rem}}
-  
-    .hero-grid{grid-template-columns:1.25fr .75fr;gap:48px}.hero-portrait{width:100%;max-width:360px;justify-self:center;background:#fff;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}.photo-window{position:relative;aspect-ratio:709/887;overflow:hidden;background:#ddd}.photo-window img{display:block;position:absolute;top:-28.2976%;left:0;width:100%;height:auto;max-width:none}.photo-caption{padding:20px 22px}.photo-caption strong{color:var(--green)}.photo-caption p{margin:6px 0 0;font-size:.93rem;color:var(--muted)}@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-portrait{max-width:320px}}@media(max-width:520px){.hero-portrait{max-width:290px}.hero{padding-top:36px}.hero-grid{gap:30px}}
+  <meta name="theme-color" content="#fbf9f4">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Conecta Dor Salvador">
+  <meta property="og:title" content="Conecta Dor Salvador">
+  <meta property="og:description" content="Orientação inicial para quem sente dor, estalos, travamento ou desconforto na região da mandíbula e da ATM em Salvador.">
 
-    header nav{display:flex;justify-content:center;align-items:center;min-height:174px;padding:12px 0}.brand-mark.brand-centered{display:block;position:relative;width:150px;height:150px;flex:0 0 150px;margin:0 auto;border-radius:0;overflow:visible}.brand-mark.brand-centered img{display:block;position:static;width:100%;height:100%;max-width:100%;object-fit:contain}@media(max-width:520px){header nav{min-height:144px;padding:10px 0}.brand-mark.brand-centered{width:124px;height:124px;flex-basis:124px}}
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-    header nav{min-height:244px;padding:12px 0}.brand-mark.brand-centered{width:220px;height:220px;flex-basis:220px}.hero{padding-top:48px}.hero-grid{grid-template-columns:1.35fr .65fr;gap:44px}.hero-portrait{max-width:300px}.doctor-video{width:min(100%,300px)}h1{font-size:clamp(2.6rem,4.8vw,4.1rem)}@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-portrait{max-width:280px}}@media(max-width:520px){header nav{min-height:190px;padding:10px 0}.brand-mark.brand-centered{width:170px;height:170px;flex-basis:170px}.hero{padding-top:30px}.hero-portrait{max-width:260px}h1{font-size:2.5rem}}
-</style>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css?v=2">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/main.js?v=2" defer></script>
 </head>
-<body>
-  <header><div class="wrap"><nav aria-label="Marca"><a class="brand-mark brand-centered" href="#" aria-label="Conecta Dor Salvador"><img src="assets/logo.png" alt="Logomarca circular Conecta Dor Salvador" width="1280" height="1280"></a></nav></div></header>
-  <main>
-    <section class="hero"><div class="wrap hero-grid"><div><h1>Você merece uma vida onde a dor não exista</h1><p class="lead">Se você sente dor, estalos, travamento ou dificuldade para mastigar, o primeiro passo é entender o que está acontecendo e buscar o cuidado adequado.</p><div class="actions"><a class="btn" href="https://wa.me/5571983498169?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20Conecta%20Dor%20Salvador%20e%20gostaria%20de%20conversar%20sobre%20o%20que%20estou%20sentindo." target="_blank" rel="noopener noreferrer">Entrar em contato</a><a class="btn secondary" href="#sinais">Conheça os sinais</a></div></div><div class="hero-portrait"><div class="photo-window"><img src="assets/dr-felipe.jpg" alt="Retrato do Dr. Felipe Rezende de jaleco" width="709" height="1536"></div><div class="photo-caption"><strong>Entre em contato com nossa equipe</strong><p>Você será ouvido(a) e poderá marcar um agendamento com um desses nossos especialistas.</p></div></div></div></section>
+<body id="topo">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <section id="video-dr-felipe" class="white"><div class="wrap video-grid"><div><div class="eyebrow">Conheça o profissional</div><h2>Dr. Felipe Rezende</h2><p class="professional-registration" style="color:var(--green);font-weight:700;margin:-6px 0 20px">CRO-BA 5156</p><p class="section-intro">Dr. Felipe Rezende é cirurgião bucomaxilofacial, com atuação em cirurgia ortognática. Atende no Centro Médico Hospital Santo Amaro, em Salvador, às quintas-feiras pela manhã.</p><!-- Antes de publicar: confirmar nome profissional e registro de especialidade com o responsável. CRO-BA 5156 informado por Rita. Tempo de atuação e número de pacientes só devem ser incluídos após comprovação. --><h3>Convênios</h3><p>Todos os convênios, exceto Planserv.</p><h3>Unidade de atendimento</h3><p>Centro Médico Hospital Santo Amaro · Salvador<br>Quintas-feiras pela manhã.</p><a class="btn" href="https://wa.me/5571983498169" target="_blank" rel="noopener noreferrer">Marque um agendamento</a></div><video class="doctor-video" controls playsinline preload="auto" poster="assets/poster-video.jpg" aria-label="Vídeo do Dr. Felipe Rezende"><source src="assets/video-dr-felipe.mp4" type="video/mp4">Seu navegador não reproduz este vídeo.</video></div></section>
-    <section id="sinais" class="white"><div class="wrap"><div class="eyebrow">O que observar</div><h2>Alguns sinais que podem levar alguém a buscar avaliação</h2><p class="section-intro">Cada pessoa vive uma situação diferente. Estes sinais não definem um diagnóstico, mas ajudam a perceber quando é importante buscar orientação profissional.</p><div class="grid"><article class="card"><div class="num">01</div><h3>Dor ou sensibilidade</h3><p>Na mandíbula, na face, perto do ouvido ou ao mastigar.</p></article><article class="card"><div class="num">02</div><h3>Estalos e ruídos</h3><p>Sons ao abrir ou fechar a boca, com ou sem desconforto.</p></article><article class="card"><div class="num">03</div><h3>Travamento</h3><p>Dificuldade, limitação ou sensação de bloqueio ao movimentar a boca.</p></article><article class="card"><div class="num">04</div><h3>Cansaço ao mastigar</h3><p>Desconforto que aparece ou aumenta durante as refeições.</p></article><article class="card"><div class="num">05</div><h3>Dor de cabeça associada</h3><p>Incômodos recorrentes que parecem acompanhar a tensão na face.</p></article><article class="card"><div class="num">06</div><h3>Mudança na rotina</h3><p>Quando o problema interfere no sono, na alimentação, na fala ou no bem-estar.</p></article></div><div class="actions"><a class="btn" href="https://wa.me/5571983498169" target="_blank" rel="noopener noreferrer">Identificou um desses sinais? Fale conosco</a></div></div></section>
-    <section><div class="wrap impact"><div><div class="eyebrow">Além do sintoma</div><h2>A dor pode ocupar mais espaço do que parece</h2><p class="section-intro">Compreender o impacto na vida faz parte do atendimento. Não se trata apenas de localizar a dor, mas de ouvir como ela tem afetado você.</p></div><div class="impact-list"><div class="impact-item"><div class="dot">✓</div><div><h3>Alimentação</h3><p>Dificuldade ou receio de mastigar determinados alimentos.</p></div></div><div class="impact-item"><div class="dot">✓</div><div><h3>Sono e disposição</h3><p>Incômodo que atrapalha o descanso ou aparece ao acordar.</p></div></div><div class="impact-item"><div class="dot">✓</div><div><h3>Concentração e trabalho</h3><p>Dor persistente que interfere nas atividades do dia.</p></div></div><div class="impact-item"><div class="dot">✓</div><div><h3>Segurança para buscar ajuda</h3><p>Dúvidas sobre qual profissional procurar e qual deve ser o próximo passo.</p></div></div></div></div></section>
-    <section class="white"><div class="wrap"><div class="eyebrow">Como funciona</div><h2>Um caminho simples, com orientação desde o primeiro contato</h2><div class="steps"><article class="step"><span>1</span><h3>Você conta sua situação</h3><p>O primeiro contato começa com escuta e perguntas essenciais, uma de cada vez.</p></article><article class="step"><span>2</span><h3>Entendemos sua necessidade</h3><p>Consideramos o tempo da dor, o impacto na rotina e avaliações anteriores.</p></article><article class="step"><span>3</span><h3>Orientamos o próximo passo</h3><p>Quando indicado, ajudamos a organizar a avaliação com a equipe adequada.</p></article></div><div class="actions"><a class="btn" href="https://wa.me/5571983498169" target="_blank" rel="noopener noreferrer">Dê o primeiro passo hoje</a></div></div></section>
-    <section><div class="wrap faq"><div class="eyebrow">Dúvidas frequentes</div><h2>Antes de conversar</h2><details><summary>O que significa ATM?</summary><p>ATM é a sigla para articulação temporomandibular, que liga a mandíbula ao crânio e participa de movimentos como falar, mastigar e abrir ou fechar a boca.</p></details><details><summary>O atendimento pelo WhatsApp faz diagnóstico?</summary><p>Não. O WhatsApp é usado para acolher, compreender a necessidade inicial e orientar o próximo passo. O diagnóstico e a indicação de tratamento dependem de avaliação profissional.</p></details><details><summary>Preciso ter exames?</summary><p>Você pode informar se já possui exames ou avaliações anteriores. A equipe orientará o que é necessário para sua situação.</p></details><details><summary>Estalo sempre significa um problema?</summary><p>Nem todo estalo tem a mesma causa ou importância. A presença de dor, travamento, limitação ou impacto na rotina ajuda a orientar a necessidade de avaliação.</p></details><details><summary>Posso falar mesmo sem saber se meu caso está relacionado à ATM?</summary><p>Sim. Conte o que está sentindo. O atendimento inicial ajuda a compreender sua necessidade e a direcionar o cuidado adequado.</p></details></div></section>
-    <section id="conversar"><div class="wrap"><div class="cta"><div><div class="eyebrow" style="color:#9fc9bb">Conversa inicial</div><h2>Conte o que você está sentindo.</h2><p>A conversa começa pela sua necessidade, sem compromisso e sem diagnóstico pelo WhatsApp.</p></div><a class="btn" href="https://wa.me/5571983498169?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20Conecta%20Dor%20Salvador%20e%20gostaria%20de%20conversar%20sobre%20o%20que%20estou%20sentindo." target="_blank" rel="noopener noreferrer" aria-label="Conversar com o Conecta Dor Salvador pelo WhatsApp">Conversar no WhatsApp</a></div></div></section>
+  <!-- Ícones: Lucide (licença ISC) e Simple Icons (CC0). -->
+  <svg class="sprite" aria-hidden="true" focusable="false" width="0" height="0">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></symbol>
+    <symbol id="i-audio" viewBox="0 0 24 24"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4"/><path d="M17.707 6.294A3 3 0 1012 5a3 3 0 10-5.707 1.294"/><path d="M17.996 5.125a4 4 0 012.526 5.77"/><path d="M18 18a4 4 0 002-7.465"/><path d="M19.967 17.482a4 4 0 11-7.967.517 4 4 0 11-7.967-.517"/><path d="M6 18a4 4 0 01-2-7.465"/><path d="M6.004 5.125a4 4 0 00-2.526 5.77"/></symbol>
+    <symbol id="i-calendar-clock" viewBox="0 0 24 24"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v3"/><path d="M21 7.338V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h2.338"/><path d="M3 9h5.859"/><path d="M8 2v3"/><circle cx="16" cy="16" r="6"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 6.528V3a1 1 0 0 1 1-1h0"/><path d="M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M6 4.75a1.75 1.75 0 0 1 2.63-1.51l12.5 7.25a1.75 1.75 0 0 1 0 3.02l-12.5 7.25A1.75 1.75 0 0 1 6 19.25z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect fill="currentColor" stroke="none" x="5" y="3.5" width="5" height="17" rx="1.5"/><rect fill="currentColor" stroke="none" x="14" y="3.5" width="5" height="17" rx="1.5"/></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></symbol>
+    <symbol id="i-volume-off" viewBox="0 0 24 24"><path d="M11 4.702a.7.7 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.7.7 0 0 0 11 19.298z"/><path d="m16.5 14.5 5-5"/><path d="m16.5 9.5 5 5"/></symbol>
+    <symbol id="i-maximize" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-minimize" viewBox="0 0 24 24"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></symbol>
+  </svg>
+
+  <div class="scroll-sentinel" data-scroll-sentinel aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="#topo" aria-label="Conecta Dor Salvador: voltar ao início">
+        <span class="brand__logo">
+          <picture>
+            <source type="image/webp" srcset="assets/logo-160.webp 160w, assets/logo-320.webp 320w" sizes="96px">
+            <img src="assets/logo-320.png" alt="" width="320" height="320" decoding="async">
+          </picture>
+        </span>
+        <span class="brand__name" aria-hidden="true">
+          <span class="brand__title">Conecta <span>Dor</span></span>
+          <span class="brand__place">Salvador</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal" data-nav>
+        <ul class="site-nav__list">
+          <li><a href="#video-dr-felipe">O profissional</a></li>
+          <li><a href="#sinais">Sinais</a></li>
+          <li><a href="#impacto">Impacto na rotina</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+        </ul>
+        <div class="site-nav__extra">
+          <a class="btn btn--primary btn--block" href="https://wa.me/5571983498169?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20Conecta%20Dor%20Salvador%20e%20gostaria%20de%20conversar%20sobre%20o%20que%20estou%20sentindo." target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Conversar no WhatsApp
+          </a>
+          <p class="site-nav__note">Centro Médico Hospital Santo Amaro · Salvador</p>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm header-cta" href="https://wa.me/5571983498169?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20Conecta%20Dor%20Salvador%20e%20gostaria%20de%20conversar%20sobre%20o%20que%20estou%20sentindo." target="_blank" rel="noopener noreferrer" aria-label="Conversar com o Conecta Dor Salvador pelo WhatsApp">
+          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          <span class="header-cta__label">Conversar</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu" data-menu-toggle>
+          <svg class="icon menu-toggle__open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon menu-toggle__close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero__decor" aria-hidden="true">
+        <svg viewBox="0 0 600 600" fill="none"><path d="M318 22c-34 62-18 118 40 168 70 60 92 128 38 196-44 56-120 92-152 162" stroke="currentColor" stroke-width="60" stroke-linecap="round"/><path d="M168 250c-70 60-98 150-52 262" stroke="currentColor" stroke-width="46" stroke-linecap="round" opacity=".7"/><path d="M360 470c62-22 122 4 148 78" stroke="currentColor" stroke-width="40" stroke-linecap="round" opacity=".7"/></svg>
+      </div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Mandíbula e ATM · Salvador</p>
+          <h1 id="hero-titulo">Você merece uma vida onde <span class="highlight">a dor não exista</span></h1>
+          <p class="lead">Se você sente dor, estalos, travamento ou dificuldade para mastigar, o primeiro passo é entender o que está acontecendo e buscar o cuidado adequado.</p>
+          <div class="actions">
+            <a class="btn btn--primary btn--lg" href="https://wa.me/5571983498169?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20Conecta%20Dor%20Salvador%20e%20gostaria%20de%20conversar%20sobre%20o%20que%20estou%20sentindo." target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Entrar em contato
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#sinais">
+              Conheça os sinais
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+            </a>
+          </div>
+          <p class="hero__note">
+            <svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg>
+            Conversa inicial sem compromisso e sem diagnóstico pelo WhatsApp.
+          </p>
+        </div>
+
+        <div class="hero__visual">
+          <div class="portrait">
+            <span class="portrait__ring" aria-hidden="true"></span>
+            <span class="portrait__dot" aria-hidden="true"></span>
+            <div class="portrait__frame">
+              <picture>
+                <source type="image/webp" srcset="assets/dr-felipe-retrato-400.webp 400w, assets/dr-felipe-retrato.webp 709w" sizes="(min-width: 900px) 360px, 96px">
+                <img src="assets/dr-felipe-retrato.jpg" alt="Retrato do Dr. Felipe Rezende de jaleco" width="709" height="887" fetchpriority="high" decoding="async">
+              </picture>
+            </div>
+          </div>
+          <div class="contact-card">
+            <strong>Entre em contato com nossa equipe</strong>
+            <p>Você será ouvido(a) e poderá marcar um agendamento com um desses nossos especialistas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profissional + vídeo -->
+    <section id="video-dr-felipe" class="section section--navy pro" aria-labelledby="pro-titulo">
+      <div class="container pro__grid">
+        <div class="pro__intro" data-reveal>
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__dot" aria-hidden="true"></span>Conheça o profissional</p>
+          <h2 id="pro-titulo">Dr. Felipe Rezende</h2>
+          <p class="professional-registration">CRO-BA 5156</p>
+          <p class="section-intro">Dr. Felipe Rezende é cirurgião bucomaxilofacial, com atuação em cirurgia ortognática. Atende no Centro Médico Hospital Santo Amaro, em Salvador, às quintas-feiras pela manhã.</p>
+          <!-- Antes de publicar: confirmar nome profissional e registro de especialidade com o responsável. CRO-BA 5156 informado por Rita. Tempo de atuação e número de pacientes só devem ser incluídos após comprovação. -->
+        </div>
+
+        <figure class="player" data-player data-reveal>
+          <div class="player__stage" data-player-stage>
+            <video class="player__video" controls playsinline preload="none" poster="assets/poster-video.jpg" width="480" height="854" aria-label="Vídeo do Dr. Felipe Rezende" data-duration="60">
+              <source src="assets/video-dr-felipe.mp4" type="video/mp4">
+              Seu navegador não reproduz este vídeo.
+            </video>
+            <div class="player__overlay" data-player-overlay aria-hidden="true" hidden>
+              <span class="player__big">
+                <svg class="icon player__big-play"><use href="#i-play"/></svg>
+                <svg class="icon player__big-replay"><use href="#i-replay"/></svg>
+              </span>
+              <span class="player__hint"><span data-player-hint>Assistir ao vídeo</span><span class="player__hint-meta">1 min · com som</span></span>
+            </div>
+            <div class="player__spinner" aria-hidden="true"></div>
+            <p class="player__error" role="alert" data-player-error hidden>Não foi possível carregar o vídeo. <a href="assets/video-dr-felipe.mp4">Abrir o arquivo do vídeo</a></p>
+          </div>
+          <div class="player__dock" role="group" aria-label="Controles do vídeo" data-player-dock hidden>
+            <input class="player__seek" type="range" min="0" max="60" step="0.1" value="0" aria-label="Posição do vídeo" aria-valuetext="0:00 de 1:00" data-player-seek>
+            <div class="player__row">
+              <button class="player__btn player__btn--main" type="button" aria-label="Reproduzir" data-player-toggle>
+                <svg class="icon player__icon-play" aria-hidden="true"><use href="#i-play"/></svg>
+                <svg class="icon player__icon-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+              </button>
+              <span class="player__time" aria-hidden="true"><span data-player-current>0:00</span><span class="player__time-sep">/</span><span data-player-total>1:00</span></span>
+              <span class="player__spacer"></span>
+              <button class="player__btn" type="button" aria-label="Silenciar" aria-pressed="false" data-player-mute>
+                <svg class="icon player__icon-volume" aria-hidden="true"><use href="#i-volume"/></svg>
+                <svg class="icon player__icon-muted" aria-hidden="true"><use href="#i-volume-off"/></svg>
+              </button>
+              <button class="player__btn" type="button" aria-label="Tela cheia" data-player-fullscreen>
+                <svg class="icon player__icon-max" aria-hidden="true"><use href="#i-maximize"/></svg>
+                <svg class="icon player__icon-min" aria-hidden="true"><use href="#i-minimize"/></svg>
+              </button>
+            </div>
+          </div>
+          <figcaption class="visually-hidden">Vídeo do Dr. Felipe Rezende, com cerca de 1 minuto de duração e legendas na imagem.</figcaption>
+        </figure>
+
+        <div class="pro__details" data-reveal>
+          <dl class="facts">
+            <div class="fact">
+              <dt><span class="fact__icon" aria-hidden="true"><svg class="icon"><use href="#i-shield-check"/></svg></span>Convênios</dt>
+              <dd>Todos os convênios, exceto Planserv.</dd>
+            </div>
+            <div class="fact">
+              <dt><span class="fact__icon" aria-hidden="true"><svg class="icon"><use href="#i-map-pin"/></svg></span>Unidade de atendimento</dt>
+              <dd>Centro Médico Hospital Santo Amaro · Salvador<br>Quintas-feiras pela manhã.</dd>
+            </div>
+          </dl>
+          <a class="btn btn--light btn--lg" href="https://wa.me/5571983498169" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Marque um agendamento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sinais -->
+    <section id="sinais" class="section section--white" aria-labelledby="sinais-titulo">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>O que observar</p>
+          <h2 id="sinais-titulo">Alguns sinais que podem levar alguém a buscar avaliação</h2>
+          <p class="section-intro">Cada pessoa vive uma situação diferente. Estes sinais não definem um diagnóstico, mas ajudam a perceber quando é importante buscar orientação profissional.</p>
+        </div>
+        <ul class="signs" role="list">
+          <li class="sign" data-reveal>
+            <span class="sign__icon" aria-hidden="true"><svg class="icon"><use href="#i-zap"/></svg></span>
+            <div class="sign__body">
+              <span class="sign__num" aria-hidden="true">01</span>
+              <h3>Dor ou sensibilidade</h3>
+              <p>Na mandíbula, na face, perto do ouvido ou ao mastigar.</p>
+            </div>
+          </li>
+          <li class="sign" data-reveal>
+            <span class="sign__icon" aria-hidden="true"><svg class="icon"><use href="#i-audio"/></svg></span>
+            <div class="sign__body">
+              <span class="sign__num" aria-hidden="true">02</span>
+              <h3>Estalos e ruídos</h3>
+              <p>Sons ao abrir ou fechar a boca, com ou sem desconforto.</p>
+            </div>
+          </li>
+          <li class="sign" data-reveal>
+            <span class="sign__icon" aria-hidden="true"><svg class="icon"><use href="#i-lock"/></svg></span>
+            <div class="sign__body">
+              <span class="sign__num" aria-hidden="true">03</span>
+              <h3>Travamento</h3>
+              <p>Dificuldade, limitação ou sensação de bloqueio ao movimentar a boca.</p>
+            </div>
+          </li>
+          <li class="sign" data-reveal>
+            <span class="sign__icon" aria-hidden="true"><svg class="icon"><use href="#i-utensils"/></svg></span>
+            <div class="sign__body">
+              <span class="sign__num" aria-hidden="true">04</span>
+              <h3>Cansaço ao mastigar</h3>
+              <p>Desconforto que aparece ou aumenta durante as refeições.</p>
+            </div>
+          </li>
+          <li class="sign" data-reveal>
+            <span class="sign__icon" aria-hidden="true"><svg class="icon"><use href="#i-brain"/></svg></span>
+            <div class="sign__body">
+              <span class="sign__num" aria-hidden="true">05</span>
+              <h3>Dor de cabeça associada</h3>
+              <p>Incômodos recorrentes que parecem acompanhar a tensão na face.</p>
+            </div>
+          </li>
+          <li class="sign" data-reveal>
+            <span class="sign__icon" aria-hidden="true"><svg class="icon"><use href="#i-calendar-clock"/></svg></span>
+            <div class="sign__body">
+              <span class="sign__num" aria-hidden="true">06</span>
+              <h3>Mudança na rotina</h3>
+              <p>Quando o problema interfere no sono, na alimentação, na fala ou no bem-estar.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="actions actions--center" data-reveal>
+          <a class="btn btn--primary btn--lg" href="https://wa.me/5571983498169" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Identificou um desses sinais? Fale conosco
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impacto -->
+    <section id="impacto" class="section section--cream" aria-labelledby="impacto-titulo">
+      <div class="container impact">
+        <div class="impact__head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Além do sintoma</p>
+          <h2 id="impacto-titulo">A dor pode ocupar mais espaço do que parece</h2>
+          <p class="section-intro">Compreender o impacto na vida faz parte do atendimento. Não se trata apenas de localizar a dor, mas de ouvir como ela tem afetado você.</p>
+        </div>
+        <ul class="impact__list" role="list">
+          <li class="impact__item" data-reveal>
+            <span class="impact__icon" aria-hidden="true"><svg class="icon"><use href="#i-apple"/></svg></span>
+            <div>
+              <h3>Alimentação</h3>
+              <p>Dificuldade ou receio de mastigar determinados alimentos.</p>
+            </div>
+          </li>
+          <li class="impact__item" data-reveal>
+            <span class="impact__icon" aria-hidden="true"><svg class="icon"><use href="#i-moon"/></svg></span>
+            <div>
+              <h3>Sono e disposição</h3>
+              <p>Incômodo que atrapalha o descanso ou aparece ao acordar.</p>
+            </div>
+          </li>
+          <li class="impact__item" data-reveal>
+            <span class="impact__icon" aria-hidden="true"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+            <div>
+              <h3>Concentração e trabalho</h3>
+              <p>Dor persistente que interfere nas atividades do dia.</p>
+            </div>
+          </li>
+          <li class="impact__item" data-reveal>
+            <span class="impact__icon" aria-hidden="true"><svg class="icon"><use href="#i-compass"/></svg></span>
+            <div>
+              <h3>Segurança para buscar ajuda</h3>
+              <p>Dúvidas sobre qual profissional procurar e qual deve ser o próximo passo.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section id="como-funciona" class="section section--white" aria-labelledby="como-titulo">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Como funciona</p>
+          <h2 id="como-titulo">Um caminho simples, com orientação desde o primeiro contato</h2>
+        </div>
+        <ol class="steps" role="list">
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">1</span>
+            <div class="step__body">
+              <h3>Você conta sua situação</h3>
+              <p>O primeiro contato começa com escuta e perguntas essenciais, uma de cada vez.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">2</span>
+            <div class="step__body">
+              <h3>Entendemos sua necessidade</h3>
+              <p>Consideramos o tempo da dor, o impacto na rotina e avaliações anteriores.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">3</span>
+            <div class="step__body">
+              <h3>Orientamos o próximo passo</h3>
+              <p>Quando indicado, ajudamos a organizar a avaliação com a equipe adequada.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="actions actions--center" data-reveal>
+          <a class="btn btn--primary btn--lg" href="https://wa.me/5571983498169" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Dê o primeiro passo hoje
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dúvidas -->
+    <section id="duvidas" class="section section--cream" aria-labelledby="duvidas-titulo">
+      <div class="container faq">
+        <div class="faq__head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Dúvidas frequentes</p>
+          <h2 id="duvidas-titulo">Antes de conversar</h2>
+        </div>
+        <div class="faq__list" data-reveal>
+          <details name="duvidas">
+            <summary>O que significa ATM?<span class="faq__mark" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>ATM é a sigla para articulação temporomandibular, que liga a mandíbula ao crânio e participa de movimentos como falar, mastigar e abrir ou fechar a boca.</p>
+          </details>
+          <details name="duvidas">
+            <summary>O atendimento pelo WhatsApp faz diagnóstico?<span class="faq__mark" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>Não. O WhatsApp é usado para acolher, compreender a necessidade inicial e orientar o próximo passo. O diagnóstico e a indicação de tratamento dependem de avaliação profissional.</p>
+          </details>
+          <details name="duvidas">
+            <summary>Preciso ter exames?<span class="faq__mark" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>Você pode informar se já possui exames ou avaliações anteriores. A equipe orientará o que é necessário para sua situação.</p>
+          </details>
+          <details name="duvidas">
+            <summary>Estalo sempre significa um problema?<span class="faq__mark" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>Nem todo estalo tem a mesma causa ou importância. A presença de dor, travamento, limitação ou impacto na rotina ajuda a orientar a necessidade de avaliação.</p>
+          </details>
+          <details name="duvidas">
+            <summary>Posso falar mesmo sem saber se meu caso está relacionado à ATM?<span class="faq__mark" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <p>Sim. Conte o que está sentindo. O atendimento inicial ajuda a compreender sua necessidade e a direcionar o cuidado adequado.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversa inicial -->
+    <section id="conversar" class="section section--cream section--cta" aria-labelledby="cta-titulo">
+      <div class="container">
+        <div class="cta" data-reveal>
+          <div class="cta__decor" aria-hidden="true">
+            <svg viewBox="0 0 600 600" fill="none"><path d="M318 22c-34 62-18 118 40 168 70 60 92 128 38 196-44 56-120 92-152 162" stroke="currentColor" stroke-width="60" stroke-linecap="round"/><path d="M168 250c-70 60-98 150-52 262" stroke="currentColor" stroke-width="46" stroke-linecap="round" opacity=".7"/><path d="M360 470c62-22 122 4 148 78" stroke="currentColor" stroke-width="40" stroke-linecap="round" opacity=".7"/></svg>
+          </div>
+          <div class="cta__text">
+            <p class="eyebrow eyebrow--light"><span class="eyebrow__dot" aria-hidden="true"></span>Conversa inicial</p>
+            <h2 id="cta-titulo">Conte o que você está sentindo.</h2>
+            <p>A conversa começa pela sua necessidade, sem compromisso e sem diagnóstico pelo WhatsApp.</p>
+          </div>
+          <a class="btn btn--light btn--lg" href="https://wa.me/5571983498169?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20Conecta%20Dor%20Salvador%20e%20gostaria%20de%20conversar%20sobre%20o%20que%20estou%20sentindo." target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp com o Conecta Dor Salvador">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Conversar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><div class="wrap footer-grid"><span>Conecta Dor Salvador · WhatsApp: <a href="https://wa.me/5571983498169">(71) 98349-8169</a></span><span>E-mail: <a href="mailto:conectadorsalvador@gmail.com">conectadorsalvador@gmail.com</a></span><span>Conteúdo informativo. Não substitui avaliação profissional.</span></div></footer>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <picture>
+          <source type="image/webp" srcset="assets/logo-160.webp 160w, assets/logo-320.webp 320w" sizes="104px">
+          <img src="assets/logo-320.png" alt="Logomarca circular Conecta Dor Salvador" width="320" height="320" loading="lazy" decoding="async">
+        </picture>
+        <p>Conteúdo informativo. Não substitui avaliação profissional.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Seções da página">
+        <h2 class="site-footer__title">Nesta página</h2>
+        <ul role="list">
+          <li><a href="#video-dr-felipe">O profissional</a></li>
+          <li><a href="#sinais">Sinais</a></li>
+          <li><a href="#impacto">Impacto na rotina</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__contact">
+        <h2 class="site-footer__title">Contato</h2>
+        <ul role="list">
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            <span>WhatsApp: <a href="https://wa.me/5571983498169" target="_blank" rel="noopener noreferrer">(71) 98349-8169</a></span>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            <span>E-mail: <a href="mailto:conectadorsalvador@gmail.com">conectadorsalvador@gmail.com</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      <span>Conecta Dor Salvador</span>
+      <a href="#topo">Voltar ao topo</a>
+    </div>
+  </footer>
 </body>
 </html>
