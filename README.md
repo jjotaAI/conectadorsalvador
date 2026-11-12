@@ -1,2 +1,2 @@
 # conectadorsalvador
-LandingPage projeto de cliente serviço de ortognatica
+LandingPage projeto de serviço de ortognatica
