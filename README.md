@@ -3,10 +3,10 @@ LandingPage projeto de serviço de ortognatica
 
 ## Estrutura
 
-Site estático, sem etapa de build. Tudo o que vai para a hospedagem está em `public_html/public_html/`:
+Site estático, sem etapa de build. Os arquivos do site ficam na raiz do repositório, que é a pasta publicada pela hospedagem:
 
 ```
-public_html/public_html/
+.
 ├── index.html                 página (HTML semântico, ícones em sprite SVG)
 └── assets/
     ├── css/styles.css         estilos; cores e tipografia ficam nos tokens do topo do arquivo
@@ -24,12 +24,12 @@ public_html/public_html/
 ## Visualizar localmente
 
 ```bash
-npx http-server public_html/public_html -p 4173
+npx http-server . -p 4173
 ```
 
 Depois abra `http://127.0.0.1:4173/`. Use um servidor que aceite requisições parciais (como o `http-server`) para o vídeo permitir avançar e voltar.
 
 ## Publicação
 
-Envie o conteúdo de `public_html/public_html/` para a hospedagem, mantendo a pasta `assets/`.
+A Hostinger está ligada a este repositório (hPanel → Avançado → Git) e publica a branch `main` na raiz do site a cada push. Por isso o `index.html` precisa ficar na raiz do repositório: dentro de uma subpasta, o domínio responde 403.
 Ao alterar `styles.css` ou `main.js`, aumente o número em `?v=` nas duas referências do `index.html` para os visitantes não ficarem com a versão antiga em cache.
