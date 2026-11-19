@@ -25,7 +25,7 @@ Site estático, sem etapa de build. Os arquivos do site ficam na raiz do reposit
 
 ## Especialistas (catálogo)
 
-A seção `#especialistas` reúne os profissionais por unidade: um índice com um cartão por unidade, o perfil do Dr. Felipe Rezende (`#video-dr-felipe`, com vídeo) e o perfil do Dr. Marcus e do Dr. Saulo (`#bahia-ortognatica`). Para incluir uma nova unidade, acrescente um cartão em `.units` e uma seção de perfil no mesmo padrão.
+A seção `#especialistas` reúne os profissionais por unidade: um índice com um cartão por unidade, o perfil do Dr. Filipe Rezende (`#video-dr-felipe`, com vídeo) e o perfil do Dr. Marcus e do Dr. Saulo (`#bahia-ortognatica`). Para incluir uma nova unidade, acrescente um cartão em `.units` e uma seção de perfil no mesmo padrão.
 
 Os botões de WhatsApp são rastreados pela tag do Google e pelo Pixel da Meta: ao mexer na página, não crie nem remova botões e mantenha o link e o texto de cada um.
 
