@@ -26,9 +26,9 @@
 
   <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=2">
+  <link rel="stylesheet" href="assets/css/styles.css?v=3">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="assets/js/main.js?v=2" defer></script>
+  <script src="assets/js/main.js?v=3" defer></script>
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -101,7 +101,7 @@
 
       <nav class="site-nav" id="menu-principal" aria-label="Navegação principal" data-nav>
         <ul class="site-nav__list">
-          <li><a href="#video-dr-felipe">O profissional</a></li>
+          <li><a href="#especialistas">Especialistas</a></li>
           <li><a href="#sinais">Sinais</a></li>
           <li><a href="#impacto">Impacto na rotina</a></li>
           <li><a href="#como-funciona">Como funciona</a></li>
@@ -112,7 +112,7 @@
             <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
             Conversar no WhatsApp
           </a>
-          <p class="site-nav__note">Centro Médico Hospital Santo Amaro · Salvador</p>
+          <p class="site-nav__note">Hospital Santo Amaro e Bahia Ortognática · Salvador</p>
         </div>
       </nav>
 
@@ -169,10 +169,59 @@
             </div>
           </div>
           <div class="contact-card">
+            <span class="team-avatars">
+              <span class="team-avatars__faces" aria-hidden="true">
+                <picture><source type="image/webp" srcset="assets/avatar-felipe.webp"><img class="" src="assets/avatar-felipe.jpg" alt="" width="192" height="192" decoding="async"></picture>
+                <picture><source type="image/webp" srcset="assets/avatar-marcus.webp"><img class="" src="assets/avatar-marcus.jpg" alt="" width="192" height="192" decoding="async"></picture>
+                <picture><source type="image/webp" srcset="assets/avatar-saulo.webp"><img class="" src="assets/avatar-saulo.jpg" alt="" width="192" height="192" decoding="async"></picture>
+              </span>
+              <span class="team-avatars__label">3 especialistas · 2 unidades</span>
+            </span>
             <strong>Entre em contato com nossa equipe</strong>
             <p>Você será ouvido(a) e poderá marcar um agendamento com um desses nossos especialistas.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Especialistas e unidades (catálogo) -->
+    <div id="especialistas" class="catalog">
+    <section class="section section--white directory" aria-labelledby="especialistas-titulo">
+      <div class="container">
+        <div class="section-head directory__head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Especialistas e unidades</p>
+          <h2 id="especialistas-titulo">Conheça os especialistas e onde cada um atende</h2>
+          <p class="section-intro">Cirurgiões bucomaxilofaciais com atuação em cirurgia ortognática e ATM, em duas unidades de Salvador. Toque em uma unidade para ver os detalhes.</p>
+        </div>
+        <ul class="units" role="list">
+          <li data-reveal>
+            <a class="unit-card" href="#video-dr-felipe">
+              <span class="unit-card__faces" aria-hidden="true">
+                <picture><source type="image/webp" srcset="assets/avatar-felipe.webp"><img class="" src="assets/avatar-felipe.jpg" alt="" width="192" height="192" decoding="async" loading="lazy"></picture>
+              </span>
+              <span class="unit-card__body">
+                <span class="unit-card__place"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>Centro Médico Hospital Santo Amaro</span>
+                <span class="unit-card__names">Dr. Felipe Rezende</span>
+                <span class="unit-card__meta">CRO-BA 5156 · Quintas-feiras pela manhã</span>
+              </span>
+              <span class="unit-card__go" aria-hidden="true"><svg class="icon"><use href="#i-arrow-down"/></svg></span>
+            </a>
+          </li>
+          <li data-reveal>
+            <a class="unit-card" href="#bahia-ortognatica">
+              <span class="unit-card__faces" aria-hidden="true">
+                <picture><source type="image/webp" srcset="assets/avatar-marcus.webp"><img class="" src="assets/avatar-marcus.jpg" alt="" width="192" height="192" decoding="async" loading="lazy"></picture>
+                <picture><source type="image/webp" srcset="assets/avatar-saulo.webp"><img class="" src="assets/avatar-saulo.jpg" alt="" width="192" height="192" decoding="async" loading="lazy"></picture>
+              </span>
+              <span class="unit-card__body">
+                <span class="unit-card__place"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>Bahia Ortognática · Caminho das Árvores</span>
+                <span class="unit-card__names">Dr. Marcus Magalhães e Dr. Saulo Pires</span>
+                <span class="unit-card__meta">CRO-BA 9273 · CRO-BA 5899</span>
+              </span>
+              <span class="unit-card__go" aria-hidden="true"><svg class="icon"><use href="#i-arrow-down"/></svg></span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -243,6 +292,135 @@
         </div>
       </div>
     </section>
+
+    <!-- Bahia Ortognática: Dr. Marcus e Dr. Saulo -->
+    <section id="bahia-ortognatica" class="section section--cream team" aria-labelledby="team-titulo">
+      <div class="container">
+        <div class="team__top">
+          <div class="team__intro" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Conheça os profissionais</p>
+            <h2 id="team-titulo">Dr. Marcus Magalhães e Dr. Saulo Pires</h2>
+            <p class="section-intro">Especialistas em Cirurgia e Traumatologia Bucomaxilofacial. Atuam em cirurgia ortognática, alterações da articulação da mandíbula (ATM), implantes dentários e harmonização facial. Atendem na Bahia Ortognática, no Caminho das Árvores, em Salvador.</p>
+          </div>
+          <figure class="team__photo" data-reveal>
+            <picture>
+              <source type="image/webp" srcset="assets/dr-marcus-dr-saulo-640.webp 640w, assets/dr-marcus-dr-saulo-1000.webp 1000w" sizes="(min-width: 900px) 460px, 100vw">
+              <img src="assets/dr-marcus-dr-saulo-1000.jpg" alt="Dr. Marcus Vinicius Sapucaia Magalhães, à esquerda, e Dr. Saulo Pires Teixeira, à direita, de jaleco azul-marinho" width="1000" height="1000" loading="lazy" decoding="async">
+            </picture>
+            <span class="team__tag team__tag--left" aria-hidden="true">Dr. Marcus</span>
+            <span class="team__tag team__tag--right" aria-hidden="true">Dr. Saulo</span>
+            <figcaption class="visually-hidden">Na foto: Dr. Marcus à esquerda e Dr. Saulo à direita.</figcaption>
+          </figure>
+        </div>
+
+        <ul class="doctors" role="list">
+          <li class="doctor" data-reveal>
+            <article aria-labelledby="dr-marcus-nome">
+              <header class="doctor__head">
+                <picture><source type="image/webp" srcset="assets/avatar-marcus.webp"><img class="doctor__avatar" src="assets/avatar-marcus.jpg" alt="" width="192" height="192" loading="lazy" decoding="async"></picture>
+                <div>
+                  <h3 id="dr-marcus-nome">Dr. Marcus Vinicius Sapucaia Magalhães</h3>
+                  <p class="doctor__meta"><span class="badge">CRO-BA 9273</span><span>À esquerda na foto</span></p>
+                </div>
+              </header>
+              <dl class="doctor__info">
+                <div>
+                  <dt>Especialidade</dt>
+                  <dd>Especialista em Cirurgia e Traumatologia Bucomaxilofacial.</dd>
+                </div>
+                <div>
+                  <dt>Formação</dt>
+                  <dd>Mestre em Cirurgia e Traumatologia Bucomaxilofacial. Pós-graduações em cirurgia ortognática, cirurgia da ATM, implantes dentários, dor orofacial e harmonização facial.</dd>
+                </div>
+                <div>
+                  <dt>Participação profissional</dt>
+                  <dd>Membro efetivo do Colégio Brasileiro de Cirurgia Bucomaxilofacial e membro da Sociedade Latino-americana de Cirurgia de ATM (LASTMJS).</dd>
+                </div>
+                <div>
+                  <dt>Áreas de atuação</dt>
+                  <dd>
+                    <span class="visually-hidden">Atua em cirurgia ortognática, alterações da articulação da mandíbula (ATM), implantes dentários e harmonização facial.</span>
+                    <ul class="chips" role="list" aria-hidden="true">
+                      <li>Cirurgia ortognática</li>
+                      <li>Alterações da ATM</li>
+                      <li>Implantes dentários</li>
+                      <li>Harmonização facial</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+            </article>
+          </li>
+          <li class="doctor" data-reveal>
+            <article aria-labelledby="dr-saulo-nome">
+              <header class="doctor__head">
+                <picture><source type="image/webp" srcset="assets/avatar-saulo.webp"><img class="doctor__avatar" src="assets/avatar-saulo.jpg" alt="" width="192" height="192" loading="lazy" decoding="async"></picture>
+                <div>
+                  <h3 id="dr-saulo-nome">Dr. Saulo Pires Teixeira</h3>
+                  <p class="doctor__meta"><span class="badge">CRO-BA 5899</span><span>À direita na foto</span></p>
+                </div>
+              </header>
+              <dl class="doctor__info">
+                <div>
+                  <dt>Especialidade</dt>
+                  <dd>Especialista em Cirurgia e Traumatologia Bucomaxilofacial.</dd>
+                </div>
+                <div>
+                  <dt>Formação</dt>
+                  <dd>Mestre em Odontologia Digital. Pós-graduações em cirurgia ortognática, cirurgia da ATM, implantes dentários, dor orofacial e harmonização facial.</dd>
+                </div>
+                <div>
+                  <dt>Participação profissional</dt>
+                  <dd>Membro efetivo do Colégio Brasileiro de Cirurgia Bucomaxilofacial, da International Association of Oral and Maxillofacial Surgeons (IAOMS) e da Sociedade Latino-americana de Cirurgia de ATM (LASTMJS).</dd>
+                </div>
+                <div>
+                  <dt>Áreas de atuação</dt>
+                  <dd>
+                    <span class="visually-hidden">Atua em cirurgia ortognática, alterações da articulação da mandíbula (ATM), implantes dentários e harmonização facial.</span>
+                    <ul class="chips" role="list" aria-hidden="true">
+                      <li>Cirurgia ortognática</li>
+                      <li>Alterações da ATM</li>
+                      <li>Implantes dentários</li>
+                      <li>Harmonização facial</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+            </article>
+          </li>
+        </ul>
+
+        <div class="team__bottom">
+          <dl class="facts facts--light">
+            <div class="fact" data-reveal>
+              <dt><span class="fact__icon" aria-hidden="true"><svg class="icon"><use href="#i-shield-check"/></svg></span>Planos de saúde</dt>
+              <dd>Amil, Bradesco Saúde, SulAmérica, Unimed e Porto Seguro.<span class="fact__note">A lista pode variar. Para cada consulta, confirme pelo WhatsApp se o plano é aceito pelo profissional e quais são as condições do atendimento.</span></dd>
+            </div>
+            <div class="fact" data-reveal>
+              <dt><span class="fact__icon" aria-hidden="true"><svg class="icon"><use href="#i-map-pin"/></svg></span>Unidade de atendimento</dt>
+              <dd>
+                <address>
+                  <strong>Bahia Ortognática</strong><br>
+                  Avenida Tancredo Neves, 2539<br>
+                  Condomínio CEO Salvador Shopping, Torre Londres<br>
+                  Salas 1103 e 1104, Caminho das Árvores<br>
+                  Salvador – BA, CEP 41820-021
+                </address>
+                <a class="fact__link" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida%20Tancredo%20Neves%2C%202539%2C%20Torre%20Londres%2C%20Caminho%20das%20%C3%81rvores%2C%20Salvador%20-%20BA%2C%2041820-021" target="_blank" rel="noopener noreferrer">Ver no mapa<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+              </dd>
+            </div>
+          </dl>
+          <div class="team__cta" data-reveal>
+            <p><strong>Tem dúvidas sobre o atendimento?</strong> Chame a gente no WhatsApp. Pedir informações é gratuito e sem compromisso.</p>
+          <a class="btn btn--primary btn--lg" href="https://wa.me/5571983498169" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Dê o primeiro passo hoje
+          </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
 
     <!-- Sinais -->
     <section id="sinais" class="section section--white" aria-labelledby="sinais-titulo">
@@ -382,12 +560,6 @@
             </div>
           </li>
         </ol>
-        <div class="actions actions--center" data-reveal>
-          <a class="btn btn--primary btn--lg" href="https://wa.me/5571983498169" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-            Dê o primeiro passo hoje
-          </a>
-        </div>
       </div>
     </section>
 
@@ -456,7 +628,7 @@
       <nav class="site-footer__nav" aria-label="Seções da página">
         <h2 class="site-footer__title">Nesta página</h2>
         <ul role="list">
-          <li><a href="#video-dr-felipe">O profissional</a></li>
+          <li><a href="#especialistas">Especialistas</a></li>
           <li><a href="#sinais">Sinais</a></li>
           <li><a href="#impacto">Impacto na rotina</a></li>
           <li><a href="#como-funciona">Como funciona</a></li>
@@ -473,6 +645,10 @@
           <li>
             <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
             <span>E-mail: <a href="mailto:conectadorsalvador@gmail.com">conectadorsalvador@gmail.com</a></span>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>
+            <span>Unidades: <a href="#video-dr-felipe">Centro Médico Hospital Santo Amaro</a> e <a href="#bahia-ortognatica">Bahia Ortognática</a></span>
           </li>
         </ul>
       </div>
