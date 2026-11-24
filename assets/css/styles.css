@@ -760,6 +760,10 @@ main:focus {
   background: var(--cream-50);
 }
 
+.section--tint {
+  background: var(--teal-50);
+}
+
 .section--navy {
   --focus: var(--white);
   background:
@@ -1700,11 +1704,18 @@ main:focus {
   }
 
   .units {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
   }
 
   .unit-card {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "faces go"
+      "body body";
+    align-content: start;
+    align-items: center;
+    gap: 18px 16px;
     padding: 26px 28px;
     border-radius: var(--radius-lg);
   }
@@ -2036,6 +2047,136 @@ main:focus {
     align-items: center;
     gap: 32px;
     padding: 28px 32px;
+  }
+}
+
+/* Perfis com retrato individual (Dr. Lucas e Dra. Carla) */
+.section--tint .team__cta {
+  border-color: var(--teal-100);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.section--tint .fact {
+  border-color: rgba(2, 97, 91, .12);
+}
+
+.doctor--photo {
+  overflow: hidden;
+  padding: 0;
+}
+
+.doctor__photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--navy-900);
+}
+
+.doctor__photo > picture:not(.doctor__inset),
+.doctor__photo > picture:not(.doctor__inset) > img {
+  width: 100%;
+  height: 100%;
+}
+
+.doctor__photo > picture:not(.doctor__inset) > img {
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.doctor__inset {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: clamp(84px, 26%, 128px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 3px solid var(--white);
+  border-radius: 18px;
+  background: var(--teal-100);
+  box-shadow: 0 12px 24px -10px rgba(1, 26, 54, .55);
+}
+
+.doctor__inset img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor__content {
+  padding: 20px;
+}
+
+.doctor__role {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .9375rem;
+  line-height: 1.45;
+}
+
+.doctor--photo .doctor__meta {
+  margin-top: 10px;
+}
+
+.doctor--photo .doctor__info {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.doctor__list {
+  display: grid;
+  gap: 6px;
+}
+
+.doctor__list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.doctor__list li::before {
+  content: "";
+  position: absolute;
+  top: .62em;
+  left: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--coral-500);
+}
+
+.chips--places {
+  margin-top: 6px;
+}
+
+.chips--places li {
+  background: var(--teal-50);
+  border-color: var(--teal-100);
+  color: var(--teal-800);
+}
+
+.fact__who {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+@media (min-width: 600px) {
+  .doctor__content {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 900px) {
+  .doctors--photo {
+    margin-top: 0;
+  }
+
+  .doctor__content {
+    padding: 28px 30px 30px;
+  }
+
+  .doctor__inset {
+    right: 18px;
+    bottom: 18px;
   }
 }
 
