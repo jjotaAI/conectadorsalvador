@@ -2159,6 +2159,14 @@ main:focus {
   font-weight: 650;
 }
 
+.fact__line {
+  display: block;
+}
+
+.fact__line + .fact__line {
+  margin-top: 8px;
+}
+
 @media (min-width: 600px) {
   .doctor__content {
     padding: 24px;
