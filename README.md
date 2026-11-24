@@ -18,6 +18,9 @@ Site estático, sem etapa de build. Os arquivos do site ficam na raiz do reposit
     ├── dr-felipe.jpg          imagem original do retrato
     ├── dr-felipe-retrato.*    retrato recortado e otimizado, usado na página
     ├── dr-marcus-dr-saulo*    foto do Dr. Marcus e do Dr. Saulo (original em JPG + versões otimizadas)
+    ├── dr-lucas-*, dra-carla-*
+    │                          retrato e foto em cirurgia do Dr. Lucas e da Dra. Carla
+    │                          (originais em JPG + recortes otimizados)
     ├── avatar-*.webp|jpg      recortes circulares de cada especialista (cartões e catálogo)
     ├── poster-video.jpg       capa do vídeo (quadro do próprio vídeo, 480×854)
     └── video-dr-felipe.mp4    vídeo original, sem alterações
@@ -25,7 +28,7 @@ Site estático, sem etapa de build. Os arquivos do site ficam na raiz do reposit
 
 ## Especialistas (catálogo)
 
-A seção `#especialistas` reúne os profissionais por unidade: um índice com um cartão por unidade, o perfil do Dr. Filipe Rezende (`#video-dr-felipe`, com vídeo) e o perfil do Dr. Marcus e do Dr. Saulo (`#bahia-ortognatica`). Para incluir uma nova unidade, acrescente um cartão em `.units` e uma seção de perfil no mesmo padrão.
+A seção `#especialistas` reúne os profissionais por unidade: um índice com um cartão por unidade, o perfil do Dr. Filipe Rezende (`#video-dr-felipe`, com vídeo) o perfil do Dr. Marcus e do Dr. Saulo (`#bahia-ortognatica`) e o perfil do Dr. Lucas Cerqueira e da Dra. Carla Chagas (`#dr-lucas-dra-carla`, Salvador, Catu e Alagoinhas). Para incluir uma nova unidade, acrescente um cartão em `.units` e uma seção de perfil no mesmo padrão.
 
 Os botões de WhatsApp são rastreados pela tag do Google e pelo Pixel da Meta: ao mexer na página, não crie nem remova botões e mantenha o link e o texto de cada um.
 
